@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Email template</title>
+</head>
+<body>
+	<h1>¡Hola Cyn, <span style="color: #ff796c;">{{ name }}</span> rellenó el formulario!</h1>
+	<p>Información brindada por el usuario. Hemos recibido este mensaje:</p>
+	<div style="background-color: #f7f7f7; padding: 20px;">
+		<p><strong>Nombre:</strong> {{ name }}</p>
+		<p><strong>Email:</strong> {{ email }}</p>
+		<p><strong>Mensaje:</strong> {{ message }}</p>
+		{% if like %}
+			<p><strong>Like:</strong> Si</p>
+		{% else %}
+			<p><strong>Like:</strong> No</p>
+		{% endif %}
+	</div>
+</body>
+</html>
